@@ -1,0 +1,51 @@
+git clone [url] --> para traer un repositorio de github
+git status --> ver el estado del repositorio
+git add . --> se agregan las modificaciones
+git commit -m "message" --> se modifica el repositorio local
+git push --> modifica el repositorio remoto (el de github)
+cd = change directory --> se usa para cambiar de carpeta. Modo de uso: "cd [nombre de la carpeta]" en caso de que esté dentro de esa en la que estoy trabajando o, si quiero ir a la carpeta que contiene a la que estoy modificando entonces se escribe "cd ..".
+
+Entonces si quiero hacer una modificación en el repositorio remoto, primero tengo que modificar el local:
+1) git add .
+2) git commit -m "[mensaje obligatorio]"
+y después lo mando a github
+3) git push
+
+browser-sync start --server --directory --files "*" --> esto genera un servidor en vivo y se actualiza con cualquier modificación hecha en la carpeta en la que ponés ese comando.
+
+Sitios de interés
+
+jsfiddle.net --> sirve para emular un código y mandarlo para que te ayuden por ejemplo en stack overflow
+codepen.io --> idem jsfiddle.net
+css-tricks.com --> trucos de css
+w3.org --> vocabulario de html
+caniuse.com --> tiene en cuenta los standards de html css js y muestra si ciertos atributos son soportados por los distintos browsers (chrome, firefox, edge, etc)
+validator.w3.org --> se puede subir un archivo para ver si es compatible.
+w3schools.com --> info importante html css js
+
+
+HTML
+
+<hr> horizontal rule
+<br> break
+<p></p> paragraph
+p is an element
+<p> is a tag
+<p>[content]</p> the content is between an opening and a closing tag.
+Some tags do not need a closing tag, just like a break and the horizontal rule.
+<p id="myID"> id is the attribute name and myID is the attribute value. Attributes must be applied only in opening tags.
+<header></header> contains some header information about the page. So usually, it consists of company logo, some tagline, sometimes, navigation.
+<nav></nav> sometimes it is contained within the header. The nav tag signifies some content that is used for navigation within our website.
+<section></section> para organizar
+<article></article> contiene artículos
+<aside></aside> información secundaria relacionada con los posts pero no con el tema principal
+<footer></footer> tiene la info del footer 
+estas tags son para organizar y que sea más legible
+
+para escribir algunos símbolos:
+&amp; = &
+&copy; = (c) simbolo de copy righ
+&lt; = <
+&gt; = >
+&nbsp; = se usa como un espacio entre dos palabras para que esas palabras siempre estén juntas en la misma línea y no se rompa el texto cuando se achica o agranda la pantalla.
+&qote; = " (en el texto) por si por alguna configuración no se observa este símbolo de manera correcta.
