@@ -154,3 +154,10 @@ The box model
 
 box-sizing: border-box --> hace que las configuraciones del tamaño de la caja sean de la caja entera. Por default tiene content-box, que hace que lo que se modifique sea el tamaño del contenido. Siendo margin > padding > border > content el box model.
 
+margins are cumulative when they are one next to the other, but they collapse when they are one on top of the other. To fix this we will set for the whole document margin = 0 and padding = 0. And to do that:
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
