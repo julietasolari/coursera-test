@@ -26,6 +26,7 @@ w3schools.com --> info importante html css js
 
 HTML
 
+Some tags
 <hr> horizontal rule
 <br> break
 <p></p> paragraph
@@ -34,6 +35,8 @@ p is an element
 <p>[content]</p> the content is between an opening and a closing tag.
 Some tags do not need a closing tag, just like a break and the horizontal rule.
 <p id="myID"> id is the attribute name and myID is the attribute value. Attributes must be applied only in opening tags.
+
+Semantic HTML tags
 <header></header> contains some header information about the page. So usually, it consists of company logo, some tagline, sometimes, navigation.
 <nav></nav> sometimes it is contained within the header. The nav tag signifies some content that is used for navigation within our website.
 <section></section> para organizar
@@ -42,10 +45,112 @@ Some tags do not need a closing tag, just like a break and the horizontal rule.
 <footer></footer> tiene la info del footer 
 estas tags son para organizar y que sea más legible
 
-para escribir algunos símbolos:
+To apply a class to an element:
+the class is an atributte so...
+<p class="class-name"></p>
+if I want to apply two classes, then I have to separate them with a space.
+<p class="class-name new-class"></p>
+
+para escribir algunos símbolos Character Entity Reference:
 &amp; = &
 &copy; = (c) simbolo de copy righ
 &lt; = <
 &gt; = >
 &nbsp; = se usa como un espacio entre dos palabras para que esas palabras siempre estén juntas en la misma línea y no se rompa el texto cuando se achica o agranda la pantalla.
 &qote; = " (en el texto) por si por alguna configuración no se observa este símbolo de manera correcta.
+
+SEO = Search Engine Optimization
+
+relative URL
+absolute URL
+
+links can be internal, external or fragment identifiers.
+
+
+CSS
+
+
+Anatomy of a CSS rule
+
+selector {
+	property: value;
+}
+
+property: value; is a declaration.
+
+the collection of the CSS rules is a stylesheet
+
+the browser comes with a default stylesheet that sets the style of different tags like h1 h2, etc.
+
+Selector types:
+*element selector
+*class selector: name it with a dot
+*id selector: name it with a #
+
+if i want the same styling for two selectors i should separate them with commas. like this:
+
+p, #main-title {
+	...
+}
+
+Combining selectors
+
+*element with class selector
+i.e: p.big {} it'll style all the paragraphs with a class named "big".
+
+*child selector
+i.e: article > p {} it will style all the paragraphs which are direct children of an article element. So if there are paragraphs that are inside a div, inside the article, they'll not be affected.
+
+*descendant selector
+i.e: article p {} it will style all the paragraphs contained in an article element, even though they are not direct children.
+
+*two classes in the same element
+i.e: .highlight.mainclass it will style all the elements that have both clases. If they have only one of them, they won't be affected.
+
+
+Pseudo-class Selector
+
+They are specified like this:
+
+selector:pseudo-class {
+	....
+}
+
+i.e:
+
+p:after {
+	...
+}
+
+Some of them are:
+
+- :link --> it is used to style unvisited links
+- :visited --> used to style visited links
+- :hover --> usted to style an element when you put your cursor over thar element.
+- :active --> used to style an element when you click it (and maintained clicked).
+- :nth-child(n) --> instead of n we can use "odd" or "even" to select all odd or even numbers. It is used to style elements in a list. Beatween the brackets we should write the number of element that we want to style.
+
+
+External stylesheets: they have to be linked with a link tag on the html file.
+
+<link rel="stylesheet" href="style.css">
+
+
+Some concepts: 
+-Origin-precedence: the last declaration wins. The last declarations will override the previous one.
+-Merge: if two declarations are given to the same element, they merge.
+-Inheritance: every child of the tag we are modifying will be modified as well.
+-Specificity: most specific selector combination wins, unless you write "!important" next to a value in a declaration. i.e: p { 
+			color: green !important;
+}
+This will override everything, even though it is not specific. AVOID USING THIS.
+
+-DOM Tree: Document Object Model tree. It shows inheritance.
+
+the relative sizes can't override the previous settings, instead they accumulate.
+
+
+The box model
+
+box-sizing: border-box --> hace que las configuraciones del tamaño de la caja sean de la caja entera. Por default tiene content-box, que hace que lo que se modifique sea el tamaño del contenido. Siendo margin > padding > border > content el box model.
+
