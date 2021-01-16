@@ -162,4 +162,18 @@ margins are cumulative when they are one next to the other, but they collapse wh
 }
 
 
+In floating elements the vertical margins never collapse.
 
+Properties: 
+- float: this property takes the element out of normal document flow, they will go to the top left or right corners of the containing element.
+- clear: esto hace que el elemento no deje que otros floating elements se encuentren a la derecha, izquierda o ambos lados (values: right, left or both).
+
+
+Relative and absolute positioning
+- Static Positioning: normal document flow. Is default for all elements, except html.
+- Relative Positioning: element is positioned relative to its position in normal document flow.
+- Absolute Positioning: all offsets (top, bottom, left, right) are relative to the position of the nearest ancestor which has positioning set on it, other than static. This type of positioning needs a relative or an absolute parent 
+
+Responsive design
+
+<meta name="viewport" content="width=device-width", initial-scale=1"> esto hace que en celulares u otros dispositivos pequeños no se haga zoom-out para que se muestre todo el contenido, sino que el contenido se adapte al tamaño de la pantalla.
